@@ -15,7 +15,7 @@
 
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Mono" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Chakra+Petch" rel="stylesheet">
 
 	<style type="text/css">
 	body {
@@ -24,66 +24,207 @@
 		float: center;
 		width: 100vw;
 		max-width: 1000px;
+		-webkit-font-smoothing: antialiased;
+		-moz-osx-font-smoothing: grayscale;
+		overflow: hidden;
+		}
+
+		.space_top {
+			margin-top: 20%;
+		}
+
+		.space {
+			margin-top: 10%;
 		}
 
 		#title{
-		font-size: 12vw;
-		color: white;
+		font-size: 100px;
+		color: black;
 		text-align: center;
 		width: 100vw;
 		max-width: 1000vw;
 		position: relative;
-		margin-top: 20vw;
 		font-weight: 300;
-		font-family: 'IBM Plex Mono', monospace;
+		font-family: 'Chakra Petch', sans-serif;
 		letter-spacing: -0.20vw;
 		transform: rotate(180deg);
+		animation-name: exampleA;
+   		animation-duration: 5s;
+   		animation-iteration-count: infinite;
+		   text-shadow:
+		    -1px -1px 0 #FFFFFF,
+		    1px -1px 0 #FFFFFF,
+		    -1px 1px 0 #FFFFFF,
+		    1px 1px 0 #FFFFFF;  
 		}
 
-		#timer {
-			max-width: 1000px;
+		@keyframes exampleA {
+		    20% {color: blue;}
+		    40% {color: yellow; transform: rotate(-360deg);}
+		    60% {color: red;}
+		    80% {color: blue;}
+		}
+
+		#title_last{
+		font-size: 100px;
+		color: black;
+		text-align: center;
+		width: 100vw;
+		max-width: 1000vw;
+		position: relative;
+		font-weight: 300;
+		font-family: 'Chakra Petch', sans-serif;
+		letter-spacing: -0.20vw;
+		transform: rotate(270deg);
+		animation-name: exampleC;
+   		animation-duration: 8s;
+   		animation-iteration-count: infinite;
+		   text-shadow:
+		    -1px -1px 0 #FFFFFF,
+		    1px -1px 0 #FFFFFF,
+		    -1px 1px 0 #FFFFFF,
+		    1px 1px 0 #FFFFFF;  
+		}
+
+		@keyframes exampleC {
+		    20% {color: red;}
+		    40% {color: black; transform: rotate(-180deg);}
+		    60% {color: teal;}
+		    80% {color: yellow;}
+		}
+
+		#title_bottom{
+		font-size: 100px;
+		color: black;
+		text-align: center;
+		width: 100vw;
+		max-width: 1000vw;
+		position: relative;
+		font-weight: 300;
+		font-family: 'Chakra Petch', sans-serif;
+		letter-spacing: -0.20vw;
+		transform: rotate(0deg);
+		animation-name: example;
+   		animation-duration: 4s;
+   		animation-iteration-count: infinite;
+		   text-shadow:
+		    -1px -1px 0 #FFFFFF,
+		    1px -1px 0 #FFFFFF,
+		    -1px 1px 0 #FFFFFF,
+		    1px 1px 0 #FFFFFF;  
+		}
+
+		@keyframes example {
+		    20% {color: blue;}
+		    40% {color: red; transform: rotate(360deg);} 
+		    60% {color: blue;}
+		    80% {color: yellow;}
+		}
+
+
+		    ul.countdown {
+                list-style: none;
+                margin: 75px 0;
+                padding: 0;
+                display: block;
+                text-align: center;
+            }
+
+            ul.countdown li {
+                display: inline-block;
+            }
+
+            ul.countdown li span {
+                font-size: 80px;
+                font-weight: 300;
+                line-height: 80px;
+            }
+
+            ul.countdown li.seperator {
+                font-size: 80px;
+                line-height: 70px;
+                vertical-align: top;
+            }
+
+            ul.countdown li p {
+                color: black;
+                font-size: 14px;
+            }
+
+		.countdown {
+			font-family: 'Chakra Petch', sans-serif;
+/*			max-width: 1000px;*/
 			position: relative;
+			color: white;
 			overflow: hidden;
 			width: 100vw;
-			height: 100px;
+/*			height: 100px;*/
 			z-index: 100;
-			margin-top: 10vw;
-			margin-left: 5vw;
-			padding: 0px;
-
-		}
-		#cover {
-			position: relative; 
-			right: 0px;
-			height: 100px;
-			max-width: 1000px;
-			margin-top: -100px;
-			background-color: none;
-			z-index: 10000;
-		}
-		#black_fill {
-			position: absolute; 
-			right: 0px; top: 0px;
-			height: 100px;
-			width: 12vw;
-			background-color: black;
-			z-index: 10000;
+			margin-top: 10v%;
+/*			margin-left: 5vw;*/
+/*			padding: 0px;*/
+		animation-name: exampleB;
+   		animation-duration: 8s;
+   		animation-iteration-count: infinite;ååå
 		}
 
+		@keyframes exampleB {
+		    20% {color: blue;}
+		    40% {color: white; transform: rotate(180deg);} 
+		    60% {color: blue;}
+		    80% {color: white;}
+		}
 	</style>
 
 </head>
 
 <body>
 
-<div id="title">Redscout</div>
+<div class="space_top" id="title">ZOMG!!!</div>
 
-<iframe id="timer" src="https://www.powr.io/plugins/countdown-timer/view?unique_label=2af1e6c1_1543505919&external_type=iframe" width="100%" height="600" frameborder="0">
-</iframe>
 
-<div id="cover">
-	<div id="black_fill"></div>
-</div>
+
+	<body data-gr-c-s-loaded="true">
+    <ul class="countdown">
+        <li>
+            <span class="days">60</span>
+            <p class="days_ref">days</p>
+        </li>
+        <li class="seperator">.</li>
+        <li>
+            <span class="hours">00</span>
+            <p class="hours_ref">hours</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+            <span class="minutes">31</span>
+            <p class="minutes_ref">minutes</p>
+        </li>
+        <li class="seperator">:</li>
+        <li>
+            <span class="seconds">25</span>
+            <p class="seconds_ref">seconds</p>
+        </li>
+    </ul>
+
+ <div class="space" id="title_bottom">Redscout</div>
+
+  <div class="space" id="title_last">3.0?</div>
+
+    <script type="text/javascript" async="" src="./DownCount Plugin_files/ga.js"></script><script type="text/javascript" src="./DownCount Plugin_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./DownCount Plugin_files/jquery.downCount.js"></script>
+
+    <script type="text/javascript">
+        $('.countdown').downCount({
+            date: '06/3/2019 12:00:00',
+            offset: +10
+        }, function () {
+            alert('RIP');
+        });
+    </script>
+
+    
+
 
 </body>
 
